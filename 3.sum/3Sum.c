@@ -13,108 +13,37 @@ such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0. */
 #include <stdio.h>
 
 
-int	different_check(int **result, int n, int m, int l, int columnSizes, int *nums)
-{
-	int i = 0;
 
-	if (columnSizes == 0)
-		return 1;
-	while (i < columnSizes)
-	{
-		if (result[i][0] == nums[n] && result[i][1] == nums[m] && result[i][2] == nums[l])
-			return (0);
-		if (result[i][0] == nums[n] && result[i][1] == nums[l] && result[i][2] == nums[m])
-			return (0);
-		if (result[i][0] == nums[m] && result[i][1] == nums[n] && result[i][2] == nums[l])
-			return (0);
-		if (result[i][0] == nums[m] && result[i][1] == nums[l] && result[i][2] == nums[n])
-			return (0);
-		if (result[i][0] == nums[l] && result[i][1] == nums[m] && result[i][2] == nums[n])
-			return (0);
-		if (result[i][0] == nums[l] && result[i][1] == nums[n] && result[i][2] == nums[m])
-			return (0);
-		i++;
-	}
-	return (1);
+int** threeSum(int *nums, int numsSize, int *returnSize, int **returnColumnSizes)
+{
+	int **array;
+
+	
+
+
+
+
+
 }
 
-int is_found_before(int *nums, int n, int numsSize)
-{
-	int i;
-	i = n;
 
-	while (0 < n)
-	{
-		if (nums[n] == nums[i])
-			return (1);
-		n--;
-	}
 
-	return (0);
-}
 
-int is_found_after(int *nums, int n, int numsSize)
-{
-	int i = 0;
 
-	while (i < n)
-	{
-		if (nums[n] == nums[i])
-			return (1);
-		i++;
-	}
 
-	return (0);
-}
 
-int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes)
-{
-	int n = 0, m = 0, l = 0;
-	int	columnSizes  = 0;
 
-	*returnColumnSizes = malloc (sizeof(int) * columnSizes);
-	int **result = malloc (sizeof(int *) * (1));
-	if (result == NULL || *returnColumnSizes == NULL)
-	{
-		*returnSize = 0;
-		return NULL;
-	}
-	n = 0;
-	while (n < numsSize)
-	{
-		m = n + 1;
-		while (m < numsSize)
-		{
-			//if (is_found_before(nums, n, numsSize))
-			//	break ;
-			//if (is_found(nums, m, numsSize))
-			//	break ;
-			l = m + 1;
-			while (l < numsSize)
-			{
-				//if (is_found_after(nums, l, numsSize))
-				//	break ;
-				//printf("n == %d, m == %d, l == %d\n",nums[n],nums[m],nums[l]);
-				if (nums[n] + nums[m] + nums[l] == 0 && different_check(result,n,m,l,columnSizes,nums))
-				{
-					result = realloc(result, sizeof(int *) * (columnSizes + 1));
-					*returnColumnSizes = realloc(*returnColumnSizes, sizeof(int) * (columnSizes + 1));
-					(*returnColumnSizes)[columnSizes] = 3;
-					result[columnSizes] = malloc (sizeof(int) * 3);
-					result[columnSizes][0] = nums[n];
-					result[columnSizes][1] = nums[m];
-					result[columnSizes][2] = nums[l];
-					columnSizes++;
-				}
-				l++;
-			}
-			m++;
-		}
-		n++;
-	}
-	*returnSize = columnSizes;
-	return (result);
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 int main ()
