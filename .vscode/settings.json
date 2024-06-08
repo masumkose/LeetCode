@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"__config": "cpp",
+		"map": "cpp",
+		"unordered_map": "cpp",
+		"stack": "cpp"
+	}
+}
