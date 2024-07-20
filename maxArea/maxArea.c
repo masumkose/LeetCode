@@ -24,7 +24,6 @@ int	maxArea(int *height, int heightSize)
 			right--;
 	}
 
-
 	return (area);
 }
 
