@@ -1,3 +1,3 @@
-//compile cpp's with 
-//cpprun
-	//g++ -std=c++11 -o program *.cpp && ./program
+#compile cpp's with 
+cpprun
+	g++ -std=c++11 -o program *.cpp && ./program  && rm ./program
