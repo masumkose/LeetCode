@@ -9,6 +9,7 @@
 #include <map>
 #include <stack>
 #include <cmath>
+#include <stdio.h>
 using namespace std;
 
 
