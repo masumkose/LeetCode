@@ -3,3 +3,8 @@ cpprun
 	g++ -std=c++11 -o program *.cpp && ./program  && rm ./program
 
 https://leetcode.com/u/masumm54/
+
+
+# Backtracking
+# Greedy approach
+# Divide and conquer
