@@ -2,11 +2,47 @@
 
 #include "../include/include.hpp"
 
+class Solution
+{
+public:
+	double myPow(double x, int n)
+	{
+		if (n == 0)
+			return 1.0;
 
+		long N = n;
+		if (N < 0)
+		{
+			x = 1 / x;
+			N = -N;
+		}
+
+		double result = 1.0;
+		double current_product = x;
+
+		while (N > 0)
+		{
+			if (N % 2 == 1)
+			{
+				result *= current_product;
+			}
+			current_product *= current_product;
+			N /= 2;
+		}
+
+		return result;
+	}
+};
 
 int main()
 {
 	Solution ss;
+	double x = 1.00000;
+	int p = -2147483648;
 
+	if (ss.myPow(x, p) == pow(x, p))
+		cout << "TRUE" << '\n';
+	else
+		cout << "FALSE" << '\n';
 	return (0);
 }
