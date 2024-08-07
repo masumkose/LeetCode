@@ -3,7 +3,7 @@
 template <typename Container>
 void print_container(const Container &container)
 {
-	//cout << "{";
+	cout << "{";
 	auto it = container.begin();
 	while (it != container.end())
 	{
@@ -11,11 +11,10 @@ void print_container(const Container &container)
 		++it;
 		if (it != container.end())
 		{
-			//cout << ", ";
+			cout << ", ";
 		}
-		cout << '\n';
 	}
-	cout << "------\n";
+	cout << "}\n";
 }
 
 template <typename Container>
