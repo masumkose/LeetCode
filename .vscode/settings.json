@@ -8,6 +8,8 @@
 		"iosfwd": "cpp",
 		"map": "cpp",
 		"algorithm": "cpp",
-		"iterator": "cpp"
+		"iterator": "cpp",
+		"list": "cpp",
+		"unordered_map": "cpp"
 	}
 }
