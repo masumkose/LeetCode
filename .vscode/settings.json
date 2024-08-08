@@ -20,6 +20,7 @@
 		"initializer_list": "cpp",
 		"stack": "cpp",
 		"string_view": "cpp",
-		"utility": "cpp"
+		"utility": "cpp",
+		"iostream": "cpp"
 	}
 }

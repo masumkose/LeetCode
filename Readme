@@ -1,6 +1,6 @@
 #compile cpp's with 
 cpprun
-	g++ -std=c++11 -o program *.cpp && ./program  && rm ./program
+	"g++ -std=c++11  *.cpp ../include/*.cpp -o program && ./program && rm program"
 
 https://leetcode.com/u/masumm54/
 
