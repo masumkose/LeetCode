@@ -10,7 +10,6 @@ public:
 		vector<vector<int>> res;
 		sort(nums.begin(), nums.end());
 
-
 		return (permute(nums));
 	}
 
@@ -19,7 +18,6 @@ public:
 		vector<vector<int>> res;
 
 		int size = nums.size();
-
 		do
 		{
 			res.push_back(nums);
