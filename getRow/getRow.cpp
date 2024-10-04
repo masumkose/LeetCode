@@ -5,13 +5,14 @@
 class Solution
 {
 public:
-
-	vector<vector<int>> generate(int numRows)
+	vector<int> getRow(int rowIndex)
 	{
+		if (rowIndex == 0) return {1};
 		vector<int> row;
 		vector<vector<int>> res;
 
-		for (int i = 0; i < numRows; i++)
+
+		for (int i = 0; i < rowIndex + 1; i++)
 		{
 			for (int j = 0; j <= i; j++)
 			{
@@ -26,7 +27,7 @@ public:
 			row.clear();
 		}
 
-		return res;
+		return res[rowIndex];
 	}
 };
 
@@ -34,11 +35,11 @@ int main()
 {
 	Solution ss;
 
-	vector<int> nums = {1,2,3,4,5,6};//, 1, 3, 6};
+	vector<int> nums = {0, 1, 2, 3, 4, 5, 6}; //, 1, 3, 6};
 
 	for (auto num : nums)
 	{
-		print_nested_container(ss.generate(num));
+		print_container(ss.getRow(num));
 	}
 
 	return (0);
