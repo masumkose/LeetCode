@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <string>
 #include <map>
+#include <tuple>
 #include <stack>
 #include <cmath>
 #include <stdio.h>
