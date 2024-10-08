@@ -30,7 +30,7 @@ int main()
 {
 	Solution ss;
 
-	vector<int> root = {1,2,2,nullptr,3,nullptr,3};
+	vector<int> root = {1,2,2,2,3,2,3};
 	TreeNode* tree = createTree(root, 0);
 	printLevelOrder(tree);
 	cout << ss.isSymmetric(tree) << '\n';
