@@ -10,6 +10,7 @@
 #include <stack>
 #include <cmath>
 #include <stdio.h>
+#include <queue>
 #include <unordered_map>
 #include <unordered_set>
 using namespace std;
@@ -21,6 +22,10 @@ void printList(ListNode *head);
 void addNodeToBack(ListNode *&head, int value);
 void clearList(ListNode *&head);
 ListNode *getEnd(ListNode *head);
+
+TreeNode *createTree(const vector<int> &arr, int index);
+void printInOrder(TreeNode* root);
+void printLevelOrder(TreeNode *root);
 
 
 template <typename Container>
