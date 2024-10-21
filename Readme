@@ -2,9 +2,16 @@
 cpprun
 	"g++ -std=c++11  *.cpp ../include/*.cpp -o program && ./program && rm program"
 
+
+
 https://leetcode.com/u/masumm54/
 
 
 # Backtracking
 # Greedy approach
 # Divide and conquer
+# Binary Tree
+# Dynamic Programming
+# Hash Map
+# Sliding Windows
+
