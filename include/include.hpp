@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <sstream>
 #include <map>
 #include <tuple>
 #include <stack>
@@ -28,6 +29,7 @@ TreeNode *createTree(const vector<int> &arr, int index);
 void printInOrder(TreeNode* root);
 void printLevelOrder(TreeNode *root);
 
+vector<string> split(const string &s, char delimiter);
 
 template <typename Container>
 void print_container(const Container &container);

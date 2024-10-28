@@ -11,6 +11,20 @@ void printList(ListNode *head)
 	cout << endl;
 }
 
+vector<string> split(const string &s, char delimiter)
+{
+	vector<string> tokens;
+	string token;
+	stringstream ss(s); // Create a stringstream object with the input string
+
+	while (getline(ss, token, delimiter))
+	{
+		tokens.push_back(token); // Extract each substring separated by the delimiter
+	}
+
+	return tokens;
+}
+
 void addNodeToBack(ListNode *&head, int value)
 {
 	ListNode *newNode = new ListNode(value);
