@@ -67,6 +67,7 @@
 		"typeinfo": "cpp",
 		"unordered_set": "cpp",
 		"queue": "cpp",
-		"*.tpp": "cpp"
+		"*.tpp": "cpp",
+		"set": "cpp"
 	}
 }
