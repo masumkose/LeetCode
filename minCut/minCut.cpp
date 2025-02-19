@@ -3,12 +3,19 @@
 
 class Solution {
 public:
-    vector<vector<string>> partition(string s) {
+    int minCut(string s) {
 
         vector<vector<string>> res;
         vector<string> cuurentPart;
         generateSubstrings(s, 0, cuurentPart, res);
-        return res;
+        int min = 2001;
+        for (auto &r : res)
+        {
+            if (r.size() - 1 < min)
+                min = r.size() - 1;
+        }
+
+        return min;
     }
 
 
@@ -21,12 +28,12 @@ public:
         }
 
 
-        for (int i = start; i < s.length(); i++)   // start = 0, i = 1 
+        for (int i = start; i < s.length(); i++)
         {
-            string substring = s.substr(start, i - start + 1); // first aa   start = 1, i = 1
+            string substring = s.substr(start, i - start + 1);
             if (isPalindrome(substring))
             {
-                cuurentPart.push_back(substring); // have a in it  aa, 
+                cuurentPart.push_back(substring);
                 generateSubstrings(s, i + 1, cuurentPart, res);
                 cuurentPart.pop_back();
             }
@@ -34,7 +41,7 @@ public:
     }
 
 
-    bool isPalindrome(string str) {
+    bool isPalindrome(string &str) {
         int len = str.size();
 
         for (int i = 0; i < len / 2; i++)
@@ -58,7 +65,7 @@ int main() {
 
     for (auto str : strings)
     {
-        print_nested_container(ss.partition(str));
+        cout << (ss.minCut(str)) << endl;
     }
 
 
