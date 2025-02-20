@@ -5,6 +5,7 @@ bool compareByLeftDigitOrder(int a, int b) {
     std::string sa = std::to_string(a);
     std::string sb = std::to_string(b);
 
+
     return sa + sb > sb + sa;
 }
 
@@ -34,10 +35,7 @@ int main() {
 
     vector<vector<int>> numss =
     {
-        {10,2},
-        {3,30,34,5, 9, 98},
-        {0,0},
-        {0,0,0}
+        {22, 2, 23},
     };
 
 
