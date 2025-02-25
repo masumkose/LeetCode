@@ -146,8 +146,6 @@ public:
                 backtrack(i + 1, curr - last + last * sub_num, last * sub_num, target, size, str + "*" + sub, num, res);
             }
         }
-
-
     }
 };
 
