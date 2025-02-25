@@ -35,6 +35,8 @@ int main() {
 
     vector<vector<int>> numss =
     {
+        {10, 2},
+        {3, 30, 34, 5, 9},
         {22, 2, 23},
     };
 
