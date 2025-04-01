@@ -13,11 +13,18 @@ class Solution:
             biggest = heapq.heappop(heap)
             freq = biggest[0] * -1
             s += (biggest[0] * -1) * biggest[1]
-            # while freq > 0:
-            #     s += biggest[1]
-                # freq -= 1
 
         return s
+
+
+    def frequencySort_alternative(self, s):
+        c = Counter(s)
+        cS = sorted(c.items(), key = lambda x:x[1], reverse = True)
+        ans = ""
+        for key, freq in cS:
+            ans += keys * freq
+        return ans
+        
 
 
 
