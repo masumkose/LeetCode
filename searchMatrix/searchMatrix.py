@@ -12,7 +12,7 @@ class Solution:
 
         while row_l <= row_r:
             mid = row_l + ((row_r - row_l) // 2)
-            if matrix[mid][0] <= target <= matrix[mid][col_r]:
+            if matrix[mid][0] <= target <= matrix[mid][-1]:
                 row = mid
                 break
             elif target >= matrix[mid][0]:

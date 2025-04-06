@@ -1,41 +1,46 @@
-class Solution(object):
-    def search(self, nums, target):
-        if not nums:
-            return False
-        
-        left, right = 0, len(nums) - 1
 
-        while left <= right:
-            mid = (left + right) // 2
+from typing import List
+import collections
 
-            if nums[mid] == target:
-                return True
-            
-            if nums[mid] == nums[left] and nums[mid] == nums[right]:
-                left += 1
-                right -= 1
 
-            elif nums[left] >= nums[left]:
-                if nums[left] <= target < nums[mid]:
-                    right = mid - 1
+
+
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+
+
+        l, r = 0, len(nums) - 1
+
+        while l <= r:
+            m = (r + l) // 2
+            if (nums[m] == target): return m
+
+            if nums[l] <= nums[m]:
+                if target > nums[m] or target < nums[l]:
+                    l = m + 1
                 else:
-                    left = mid + 1
-    
+                    r = m - 1
             else:
-                if nums[right] >= target > nums[mid]:
-                    left = mid + 1
+                if target < nums[m] or target > nums[r]:
+                    r = m - 1
                 else:
-                    right = mid - 1
+                    l = m + 1
 
-        return False
+        return -1
 
 
 ss = Solution()
 
+test_cases = [([4,5,6,7,0,1,2], 0), ([4,5,6,7,0,1,2], 3), ([1], 0), ([3,5,1], 3), ([4,5,6,7,0,1,2], 5)]
 
-nums = [2,5,6,0,0,1,2]
-target = 0
-print(ss.search(nums,target))
-nums = [2,5,6,0,0,1,2]
-target = 3
-print(ss.search(nums,target))
+
+for nums, target in test_cases:
+    print(ss.search(nums, target))
+
+
+ 
+
+
+
+
