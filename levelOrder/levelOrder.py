@@ -20,7 +20,7 @@ class Solution:
             qlen = len(q)
             level = []
             for i in range(qlen):
-                node = q.pop()
+                node = q.pop(0)
                 if node:
                     level.append(node.val)
                     q.append(node.left)
