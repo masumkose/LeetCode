@@ -69,5 +69,10 @@
 		"queue": "cpp",
 		"*.tpp": "cpp",
 		"set": "cpp"
+	},
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#541A0E",
+		"titleBar.activeBackground": "#762414",
+		"titleBar.activeForeground": "#FEF8F7"
 	}
 }
