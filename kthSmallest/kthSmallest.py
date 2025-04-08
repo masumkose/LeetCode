@@ -11,29 +11,33 @@ class TreeNode:
 
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        val = [0]
+        i = 0
+        res = root.val
 
-        def dfs(root, i):
-            if not root:
+        def dfs(node):
+            nonlocal i, res
+            if not node:
                 return
-            if i == k:
-                val[0] = root.val
-                return
-            elif i > k:
-                return
-            dfs(root.left, i + 1)
-            dfs(root.right, i + 1)
-
-        dfs(root, 0)
-        return val[0]
             
+            dfs(node.left)
+            i += 1
+            if i == k:
+                res = node.val
+                return
+            dfs(node.right)
+        dfs(root)
+        return res
 
 
-        
-
-
+root = TreeNode(3)
+root.left = TreeNode(1)
+root.right = TreeNode(4)
+root.left.right = TreeNode(2)
 
 ss = Solution()
+
+print(ss.kthSmallest(root, 1))
+
 
 
 
